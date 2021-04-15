@@ -1,0 +1,201 @@
+bill_id,cosponsors,sponsor_party,sponsor_state,committee_codes,subcommittee_codes,primary_subject,is_pork
+hr95-116,301,D,CA,"['SSVA', 'HSVR']",['HSVR10'],Armed Forces and National Security,FALSE
+hr592-115,296,R,KY,"['HSWM', 'HSIF']",['HSWM02'],Health,FALSE
+hr1197-114,274,D,FL,['HSIF'],['HSIF14'],Health,FALSE
+hr141-116,264,R,IL,['HSWM'],['HSWM01'],Social Welfare,FALSE
+hr502-115,242,D,AZ,['HSII'],"['HSII13', 'HSII10']",Public Lands and Natural Resources,FALSE
+hr1190-114,235,R,TN,"['SSFI', 'HSRU', 'HSIF', 'HSWM']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1192-114,229,R,TX,"['SSHR', 'HSIF']",['HSIF14'],Health,FALSE
+hr1062-114,188,R,MO,"['HSJU', 'HSPW']","['HSJU10', 'HSPW05']",Transportation and Public Works,FALSE
+hr512-115,174,R,FL,"['SSVA', 'HSVR']",['HSVR09'],Armed Forces and National Security,FALSE
+hr490-115,173,R,IA,['HSJU'],"['HSJU08', 'HSJU10']",Crime and Law Enforcement,FALSE
+hr1174-114,137,R,PA,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr1076-114,133,R,NY,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr508-115,131,D,CA,"['HSWM', 'HSIF']",['HSWM02'],Health,FALSE
+hr1150-114,116,R,NJ,"['SSFR', 'HSFA', 'HSGO', 'HSBA']",['HSFA16'],International Affairs,FALSE
+hr530-115,98,D,NY,"['HSBA', 'HSJU', 'HSFA']","['HSJU08', 'HSJU01']",International Affairs,FALSE
+hr400-115,94,R,TN,"['HSBA', 'HSPW', 'HSJU']","['HSJU01', 'HSPW13']",Immigration,FALSE
+hr489-115,94,D,WA,['HSJU'],"['HSJU01', 'HSJU08']","Civil Rights and Liberties, Minority Issues",FALSE
+hr1095-114,94,D,GA,['HSAS'],['HSAS02'],Armed Forces and National Security,FALSE
+hr547-115,87,D,CT,"['HSWM', 'HSBA', 'HSPW', 'HSIF']","['HSPW02', 'HSPW14', 'HSPW12', 'HSPW07', 'HSPW05']",Government Operations and Politics,FALSE
+hr1019-114,82,R,IL,['HSJU'],['HSJU01'],Immigration,FALSE
+hr535-115,81,R,OH,"['SSFR', 'HSFA']",['HSFA05'],International Affairs,FALSE
+hr94-116,78,D,CA,['HSJU'],['HSJU10'],"Civil Rights and Liberties, Minority Issues",FALSE
+hr411-115,77,R,NY,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr1061-114,77,R,NE,['HSED'],['HSED14'],Agriculture and Food,FALSE
+hr1151-114,74,R,TN,"['HSWM', 'HSIF']","['HSWM02', 'HSIF14']",Health,FALSE
+hr96-116,73,D,CA,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr1130-114,72,R,PA,"['HSWM', 'HSIF']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1086-114,67,R,IN,['HSPW'],['HSPW05'],Transportation and Public Works,FALSE
+hr1094-114,63,R,TX,['HSAS'],['HSAS02'],Armed Forces and National Security,FALSE
+hr544-115,57,R,CA,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr1089-114,56,R,CO,"['HSAP', 'HSED']",['HSED13'],Taxation,FALSE
+hr117-116,54,D,TN,['HSIF'],['HSIF14'],Health,FALSE
+hr119-116,54,D,TN,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr553-115,52,R,GA,['HSII'],['HSII10'],Public Lands and Natural Resources,FALSE
+hr1088-114,52,D,WA,"['HSIF', 'HSED', 'HSWM']","['HSED02', 'HSWM04', 'HSIF17']",Foreign Trade and International Finance,FALSE
+hr1148-114,50,R,SC,"['HSJU', 'HSHM']","['HSHM11', 'HSJU01']",Immigration,FALSE
+hr1147-114,48,R,TX,"['HSJU', 'HSED', 'HSWM']","['HSWM01', 'HSJU01']",Immigration,FALSE
+hr449-115,47,D,NY,"['SSHR', 'HSIF']",['HSIF14'],Health,FALSE
+hr1180-114,47,R,FL,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr468-115,46,R,FL,['HSPW'],"['HSPW07', 'HSPW02']",Environmental Protection,FALSE
+hr1178-114,45,R,NY,"['HSWM', 'HSIF']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1112-114,43,D,MA,"['HSFA', 'HSJU']","['HSJU01', 'HSFA05']",International Affairs,FALSE
+hr1153-114,43,R,UT,"['HSJU', 'HSFA']",['HSJU01'],Immigration,FALSE
+hr1000-114,42,D,MI,"['HSWM', 'HSED']",['HSED13'],Labor and Employment,FALSE
+hr1149-114,40,R,TX,"['HSJU', 'HSFA']",['HSJU01'],International Affairs,FALSE
+hr1116-114,39,R,FL,"['HSWM', 'HSIF']","['HSWM02', 'HSIF14']",Health,FALSE
+hr532-115,38,D,TX,['HSJU'],['HSJU01'],Immigration,FALSE
+hr1101-114,38,R,KY,"['HSVR', 'HSIF']","['HSVR03', 'HSIF14']",Health,FALSE
+hr459-115,37,R,MO,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr520-115,36,R,NV,['HSII'],['HSII06'],Public Lands and Natural Resources,FALSE
+hr586-115,36,R,GA,['HSJU'],['HSJU10'],"Civil Rights and Liberties, Minority Issues",FALSE
+hr1193-114,35,D,WA,"['HSGO', 'HSAS']",['HSAS02'],Armed Forces and National Security,FALSE
+hr1090-114,34,R,MO,"['SSBK', 'HSED', 'HSBA']","['HSBA16', 'HSBA09', 'HSED02']",Finance and Financial Sector,FALSE
+hr101-116,33,R,FL,['HSWM'],['HSWM04'],Foreign Trade and International Finance,FALSE
+hr120-116,32,D,TN,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr426-115,32,R,TX,"['HSAS', 'HSJU']","['HSAS03', 'HSJU08']",Crime and Law Enforcement,FALSE
+hr1161-114,32,D,NC,['HSII'],['HSII10'],"Civil Rights and Liberties, Minority Issues",FALSE
+hr140-116,31,R,IA,['HSJU'],['HSJU01'],Immigration,FALSE
+hr496-115,31,R,CO,['HSJU'],['HSJU01'],Immigration,FALSE
+hr1021-114,31,R,TX,"['HSIF', 'HSWM']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1025-114,29,D,WA,['HSAG'],['HSAG03'],Agriculture and Food,FALSE
+hr1123-114,29,D,IL,['HSJU'],['HSJU01'],Immigration,FALSE
+hr1170-114,29,D,FL,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr1027-114,28,D,MD,"['HSWM', 'HSIF']",['HSIF03'],Environmental Protection,FALSE
+hr1096-114,28,R,AL,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr539-115,27,R,TN,"['HSWM', 'HSIF']",['HSWM02'],Health,FALSE
+hr506-115,26,R,FL,"['SSJU', 'HSJU']",['HSJU08'],Crime and Law Enforcement,FALSE
+hr522-115,26,R,VA,['HSJU'],['HSJU05'],Law,FALSE
+hr1114-114,26,R,LA,"['HSJU', 'HSWM']","['HSJU08', 'HSWM04']",Crime and Law Enforcement,FALSE
+hr466-115,25,R,IL,['HSFA'],['HSFA16'],International Affairs,FALSE
+hr1107-114,25,R,AZ,['HSII'],['HSII13'],Water Resources Development,FALSE
+hr1135-114,25,R,MI,"['HSII', 'HSPW']","['HSII13', 'HSPW02']",Environmental Protection,FALSE
+hr442-115,24,R,MN,"['HSAG', 'HSBA', 'HSWM', 'HSFA']",['HSWM04'],International Affairs,FALSE
+hr486-115,24,R,AZ,['HSJU'],['HSJU01'],Immigration,FALSE
+hr510-115,24,R,WI,"['SSJU', 'HSJU']",['HSJU08'],Crime and Law Enforcement,FALSE
+hr598-115,24,D,MA,['HSPW'],['HSPW05'],Transportation and Public Works,FALSE
+hr1057-114,22,R,CA,['HSJU'],['HSJU03'],Commerce,FALSE
+hr1117-114,22,D,FL,['HSIF'],['HSIF14'],Health,FALSE
+hr453-115,21,D,MN,['HSIF'],['HSIF18'],Environmental Protection,FALSE
+hr463-115,21,D,VA,['HSFA'],['HSFA14'],International Affairs,FALSE
+hr469-115,21,R,GA,"['SSJU', 'HSJU']",['HSJU05'],Government Operations and Politics,FALSE
+hr1093-114,21,R,OH,['HSPW'],['HSPW02'],Environmental Protection,FALSE
+hr444-115,20,D,FL,['HSIF'],['HSIF17'],Commerce,FALSE
+hr99-116,19,R,FL,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr139-116,19,R,IL,['HSII'],['HSII10'],Public Lands and Natural Resources,FALSE
+hr476-115,19,R,WA,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr1013-114,19,D,CO,"['HSAG', 'HSII', 'HSWM', 'HSIF', 'HSJU']","['HSWM04', 'HSII10', 'HSJU08', 'HSAG15', 'HSIF14']",Crime and Law Enforcement,FALSE
+hr1073-114,19,R,AZ,"['SSGA', 'HSHM']",['HSHM08'],Emergency Management,FALSE
+hr431-115,18,R,TX,['HSSY'],['HSSY20'],Energy,FALSE
+hr1009-114,18,D,CA,['HSPW'],['HSPW13'],Emergency Management,FALSE
+hr1102-114,18,D,GA,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr1171-114,18,R,NY,"['HSED', 'HSWM']",['HSED02'],Taxation,FALSE
+hr1005-114,17,D,CA,['HSED'],['HSED13'],Labor and Employment,FALSE
+hr1087-114,17,R,WI,['HSJU'],['HSJU05'],Taxation,FALSE
+hr1131-114,17,D,WA,"['HSJU', 'HSWM', 'HSED']","['HSED13', 'HSJU05']",Education,FALSE
+hr1139-114,17,D,CA,['HSIF'],['HSIF17'],Commerce,FALSE
+hr1141-114,16,D,CA,['HSVR'],['HSVR10'],Armed Forces and National Security,FALSE
+hr1175-114,16,D,CA,"['HSIF', 'HSFA']","['HSFA18', 'HSIF03']",Foreign Trade and International Finance,FALSE
+hr1199-114,16,R,TX,"['HSIF', 'HSJU']","['HSJU10', 'HSIF17']",Law,FALSE
+hr421-115,15,R,UT,"['HSIF', 'HSWM']","['HSWM02', 'HSIF14']",Health,FALSE
+hr475-115,15,R,CA,['HSII'],['HSII13'],Public Lands and Natural Resources,FALSE
+hr550-115,15,D,NY,['HSHM'],['HSHM07'],Transportation and Public Works,FALSE
+hr1120-114,15,R,TN,"['HSJU', 'HSPW']","['HSJU10', 'HSPW12']",Transportation and Public Works,FALSE
+hr1179-114,15,R,NY,"['HSED', 'HSWM']","['HSED13', 'HSWM03']",Social Welfare,FALSE
+hr576-115,14,R,OH,"['HSGO', 'HSWM']",['HSWM03'],Social Welfare,FALSE
+hr1091-114,14,D,FL,['HSAG'],['HSAG14'],Agriculture and Food,FALSE
+hr127-116,13,D,TN,['HSIF'],"['HSVR03', 'HSIF14', 'HSJU08']",Crime and Law Enforcement,FALSE
+hr147-116,13,R,SC,['HSJU'],['HSJU01'],Immigration,FALSE
+hr406-115,13,D,WI,['HSAS'],['HSAS02'],Armed Forces and National Security,FALSE
+hr457-115,13,D,NV,['HSVR'],['HSVR09'],Armed Forces and National Security,FALSE
+hr1157-114,13,R,CA,['HSII'],['HSII24'],Native Americans,FALSE
+hr1003-114,12,R,IN,['HSED'],['HSED02'],Labor and Employment,FALSE
+hr1006-114,12,D,CA,['HSIF'],['HSIF14'],Health,FALSE
+ai-13,11,D,MA,['SSAP'],['SSAP02'],Tactical Metal Fabrication System,TRUE
+hr464-115,11,D,VA,['HSJU'],['HSJU03'],Law,FALSE
+hr1079-114,11,D,RI,['HSED'],['HSED14'],Education,FALSE
+hr1092-114,11,D,FL,['HSPW'],['HSPW13'],Commerce,FALSE
+hr1106-114,11,R,TN,['HSIF'],['HSIF16'],"Science, Technology, Communications",FALSE
+hr1140-114,11,D,CA,['HSPW'],['HSPW02'],Environmental Protection,FALSE
+hr1181-114,11,D,IL,['HSIF'],['HSIF17'],Transportation and Public Works,FALSE
+hr1194-114,11,R,PA,['HSED'],['HSED14'],Education,FALSE
+hr146-116,10,R,SC,['HSJU'],['HSJU01'],Immigration,FALSE
+hr591-115,10,R,VA,['HSJU'],['HSJU01'],Immigration,FALSE
+hr1126-114,10,R,NY,['HSAS'],['HSAS02'],Armed Forces and National Security,FALSE
+hr434-115,9,R,CA,['HSII'],['HSII13'],Water Resources Development,FALSE
+hr1017-114,9,R,IN,['HSVR'],['HSVR08'],Armed Forces and National Security,FALSE
+hr1033-114,9,D,OH,['HSII'],['HSII10'],Public Lands and Natural Resources,FALSE
+hr1084-114,9,D,TX,['HSPW'],['HSPW05'],Transportation and Public Works,FALSE
+hr1155-114,9,R,MO,"['SSGA', 'HSJU', 'HSGO']",['HSJU05'],Government Operations and Politics,FALSE
+ai-19,8,D,NM,['SSAP'],['SSAP01'],Efficient Irrigation,TRUE
+hr445-115,8,D,FL,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr465-115,8,R,OH,['HSPW'],['HSPW02'],Environmental Protection,FALSE
+hr504-115,8,R,NJ,['HSJU'],['HSJU10'],Government Operations and Politics,FALSE
+hr1075-114,8,D,AZ,"['SSEV', 'HSWM']",['HSWM04'],Government Operations and Politics,FALSE
+hr1136-114,8,R,NM,['HSWM'],['HSWM02'],Labor and Employment,FALSE
+hr1159-114,8,R,NJ,['HSFA'],"['HSFA05', 'HSFA16']",International Affairs,FALSE
+hr893-117,7,R,TN,['HSJU'],[],Law,FALSE
+hr145-116,7,R,SC,['HSFA'],['HSFA13'],International Affairs,FALSE
+hr472-115,7,R,CA,['HSJU'],['HSJU10'],Housing and Community Development,FALSE
+hr565-115,7,R,CA,"['HSFA', 'HSJU']",['HSJU01'],Immigration,FALSE
+hr578-115,7,R,VA,['HSVR'],['HSVR10'],Armed Forces and National Security,FALSE
+hr1042-114,7,D,MI,['HSED'],['HSED14'],Education,FALSE
+hr427-115,6,D,NJ,['HSIF'],['HSIF14'],Health,FALSE
+hr479-115,6,R,TX,"['SSFR', 'HSFA']","['HSFA18', 'HSFA05']",International Affairs,FALSE
+hr495-115,6,R,TX,"['HSJU', 'HSFA']","['HSFA16', 'HSJU01']",International Affairs,FALSE
+hr1041-114,6,R,NC,"['HSHM', 'HSJU']","['HSHM12', 'HSJU01', 'HSJU08']",Crime and Law Enforcement,FALSE
+hr1043-114,6,D,WI,['HSPW'],"['HSPW13', 'HSPW02', 'HSPW14', 'HSPW12', 'HSPW07']",Emergency Management,FALSE
+hr1055-114,6,D,MD,"['HSAS', 'HSVR', 'HSII', 'HSJU', 'HSWM', 'HSIF']","['HSAS02', 'HSWM02', 'HSII24', 'HSJU08', 'HSVR03']",Health,FALSE
+hr1122-114,6,R,PA,"['HSJU', 'HSAS', 'HSPW', 'HSWM']","['HSAS02', 'HSJU08', 'HSPW07']",Economics and Public Finance,FALSE
+hr1187-114,6,R,NY,['HSVR'],['HSVR10'],Armed Forces and National Security,FALSE
+hr893-115,5,D,NY,"['HSRU', 'HSHA']",[],Government Operations and Politics,FALSE
+hr100-116,5,R,FL,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr514-115,5,R,CA,['HSJU'],['HSJU01'],Crime and Law Enforcement,FALSE
+hr546-115,5,R,TX,['HSJU'],['HSJU01'],Immigration,FALSE
+hr1007-114,5,D,CA,['HSIF'],['HSIF17'],Commerce,FALSE
+hr1018-114,5,R,NC,"['HSWM', 'HSIF']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1109-114,5,R,CA,['HSWM'],['HSWM01'],Social Welfare,FALSE
+hr1121-114,5,D,MD,['HSED'],['HSED13'],Labor and Employment,FALSE
+hr1196-114,5,R,TX,"['HSIF', 'HSJU', 'HSWM']","['HSJU05', 'HSWM02', 'HSIF14']",Taxation,FALSE
+hr662-112,4,R,FL,[],[],Transportation and public works,TRUE
+ai-23,4,R,TX,['SSAP'],['SSAP02'],Moving Target Indicator Scout Radar,TRUE
+hr433-115,4,R,SC,['HSIF'],['HSIF18'],Energy,FALSE
+hr440-115,4,R,TX,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr441-115,4,R,CA,['HSJU'],['HSJU01'],Immigration,FALSE
+hr471-115,4,D,MN,['HSIF'],['HSIF17'],Commerce,FALSE
+hr484-115,4,D,OR,['HSJU'],['HSJU10'],Crime and Law Enforcement,FALSE
+hr501-115,4,D,MI,['HSVR'],['HSVR03'],Armed Forces and National Security,FALSE
+hr1004-114,4,D,CA,['HSED'],['HSED14'],Education,FALSE
+hr1016-114,4,R,TN,['HSVR'],"['HSVR08', 'HSVR03']",Armed Forces and National Security,FALSE
+hr1103-114,4,R,NJ,"['HSBA', 'HSSM', 'HSWM', 'HSFA']","['HSWM04', 'HSFA18', 'HSFA16']",Foreign Trade and International Finance,FALSE
+hr1124-114,4,D,TX,"['HSAS', 'HSJU']","['HSAS03', 'HSJU08']",Crime and Law Enforcement,FALSE
+hr1129-114,4,D,AZ,['HSVR'],['HSVR08'],Armed Forces and National Security,FALSE
+ai-07,3,D,IA,['SSAP'],['SSAP02'],Low Cost Military GPS Receiver,TRUE
+ai-08,3,D,CT,['SSAP'],['SSAP16'],"Sea Research Foundation, Mystic, Immersion Presents After-School Program",TRUE
+hr470-115,3,D,MN,['HSJU'],['HSJU10'],Commerce,FALSE
+hr499-115,3,R,FL,"['HSIF', 'HSWM', 'HSHA', 'HSGO']",['HSWM02'],Government Operations and Politics,FALSE
+hr556-115,3,R,NJ,['HSPW'],['HSPW12'],Transportation and Public Works,FALSE
+hr1012-114,3,D,WA,"['HSIF', 'HSWM']","['HSWM02', 'HSIF14']",Health,FALSE
+hr1035-114,3,D,CA,['HSED'],['HSED10'],Government Operations and Politics,FALSE
+hr1051-114,3,D,CA,"['HSHM', 'HSWM']","['HSWM04', 'HSHM11']",Foreign Trade and International Finance,FALSE
+hr1052-114,3,D,OR,['HSII'],['HSII10'],Public Lands and Natural Resources,FALSE
+hr1056-114,3,R,WI,['HSJU'],['HSJU08'],Crime and Law Enforcement,FALSE
+hr1060-114,3,R,CA,['HSII'],['HSII13'],Water Resources Development,FALSE
+hr1077-114,3,D,AZ,['HSII'],['HSII10'],Public Lands and Natural Resources,FALSE
+hr1099-114,3,R,AR,['HSII'],['HSII10'],Animals,FALSE
+ai-02,2,D,CT,['SSAP'],['SSAP02'],Advanced Affordable Turbine Research Program,TRUE
+ai-04,2,D,NJ,['SSAF'],['SSAF16'],Cranberry/Blueberry Disease and Breeding,TRUE
+ai-05,2,R,KS,['SSAP'],['SSAP02'],B-52 Tactical Data Link Capability,TRUE
+ai-18,2,R,PA,['SSAP'],['SSAP02'],Nanotechnology for Potable Water and Waste Treatment,TRUE
+ai-24,2,R,CA,['SSAP'],['SSAP02'],Alternative Submersible Concept Design Study,TRUE
+hr3081-111,0,D,NY,[],[],Economics and public finance,TRUE
+ai-01,0,D,VA,['SSAP'],['SSAP02'],Secure Remote Monitoring Systems,TRUE
+ai-03,0,R,FL,['SSAP'],['SSAP02'],Raytheon - Cooperative Engagement Capability,TRUE
+ai-06,0,R,CA,['SSAP'],['SSAP16'],Uturn Gang Prevention Strategy,TRUE
+ai-11,0,D,PA,['SSAP'],['SSAP02'],Submarine Navigation Decision Aids,TRUE
+ai-12,0,D,CA,['SSAP'],['SSAP16'],"City of Redondo Beach, Redondo Beach Emergency Operations Center",TRUE
+ai-15,0,D,OH,['SSAP'],['SSAP02'],"Multifunctional Materials, Devices, and Applications",TRUE
+ai-17,0,D,AZ,['SSAP'],['SSAP02'],Common Safety System Controller,TRUE
+ai-21,0,R,CA,['SSAP'],['SSAP02'],"Hand-held, Lethal Small Unmanned Aircraft System",TRUE
+ai-22,0,D,AZ,['SSAP'],['SSAP16'],Arizona Law Enforcement Communications System,TRUE
