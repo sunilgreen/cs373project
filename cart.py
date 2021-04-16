@@ -2,6 +2,7 @@ import ast
 import csv
 import sys
 
+import graphviz
 import numpy
 import pandas as pd
 import sklearn
