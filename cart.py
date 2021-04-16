@@ -25,13 +25,20 @@ df["subcommittee_codes"] = df["subcommittee_codes"].transform(lambda x: ast.lite
 df = df.join(pd.DataFrame(mlb.fit_transform(df["committee_codes"]), columns=mlb.classes_, index=df.index))
 df = df.join(pd.DataFrame(mlb.fit_transform(df["subcommittee_codes"]), columns=mlb.classes_, index=df.index))
 
+
+# Remove columns since they are now redundant
 df = df.drop(["committee_codes", "subcommittee_codes"], axis=1)
 
+# Transform sponsor columns into one-hot arrays
 enc = OneHotEncoder(handle_unknown='ignore')
 X = df[['sponsor_party', 'sponsor_state']]
 enc.fit(X)
 X = enc.transform(X).toarray()
-print(X.shape)
+df = df.join(pd.DataFrame(X))
+
+# Remove redundant columns
+#df = df.drop(["sponsor_party", "sponsor_state"])
+print(df.to_string())
 
 
 
