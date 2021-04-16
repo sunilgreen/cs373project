@@ -2,6 +2,7 @@ import ast
 import csv
 import sys
 
+import graphviz
 import numpy
 import pandas as pd
 import sklearn
@@ -38,7 +39,7 @@ df = df.join(pd.DataFrame(X))
 
 # Remove redundant columns
 #df = df.drop(["sponsor_party", "sponsor_state"])
-print(df.to_string())
+#print(df.to_string())
 
 
 
@@ -51,4 +52,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 clf = DecisionTreeClassifier()
 clf = clf.fit(X_train,y_train)
 y_pred = clf.predict(X_test)
-#print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+# sklearn.tree.plot_tree(clf)
+
+dot_data = sklearn.tree.export_graphviz(clf, out_file=None)
+graph = graphviz.Source(dot_data)
+graph.render("wee")
