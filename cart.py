@@ -3,26 +3,25 @@ import csv
 import sys
 
 import graphviz
-import numpy
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import sklearn
 from sklearn import metrics
+from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer, OneHotEncoder
-from sklearn.tree import DecisionTreeClassifier
-print(__doc__)
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 
-numpy.set_printoptions(threshold=sys.maxsize)
+#print(__doc__)
 
-def cleandata():
+
+
+np.set_printoptions(threshold=sys.maxsize)
+
+def load_data():
     mlb = MultiLabelBinarizer()
-    header_names = ["bill_id", "cosponsors", "sponsor_party", "sponsor_state", "committee_codes", "subcommittee_codes", "primary_subject", "is_pork"]
+    # header_names = ["bill_id", "cosponsors", "sponsor_party", "sponsor_state", "committee_codes", "subcommittee_codes", "primary_subject", "is_pork"]
     df = pd.read_csv("billdata.csv")
 
     # In csv file, column values are strings, but we must parse them as lists
@@ -44,26 +43,34 @@ def cleandata():
     enc.fit(X)
     X = enc.transform(X).toarray()
     df = df.join(pd.DataFrame(X))
+    # print(df.columns)
+    df = df.drop(['bill_id'], axis=1)
     
 
     # Remove redundant columns
-    #df = df.drop(["sponsor_party", "sponsor_state"])
+    df = df.drop(["sponsor_party", "sponsor_state", "primary_subject"], axis=1)
     #print(df.to_string())
 
-    y = df.is_pork
+    # X_train, X_test, y_train, y_test = train_test_split(df.to_numpy(), y, test_size=test_size, random_state=1)
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+    X_data = df.drop(['is_pork'], axis=1) 
+    y_data = df[['is_pork']]
+    return X_data, y_data
 
-    return X_train, X_test, y_train, y_test
+def train(X_train, y_train):
 
-clf = DecisionTreeClassifier()
-clf = clf.fit(X_train,y_train)
-y_pred = clf.predict(X_test)
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+    clf = DecisionTreeClassifier()
+    clf = clf.fit(X_train,y_train)
+    # print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 
-sklearn.tree.plot_tree(clf)
+    # sklearn.tree.plot_tree(clf)
 
-plt.figure()
-plot_tree(clf, filled=True)
-plt.show()
+    # plt.figure()
+    # plot_tree(clf, filled=True)
+    # plt.show()
+
+    return clf
+
+def test(X_test, clf):
+    return clf.predict(X_test)
