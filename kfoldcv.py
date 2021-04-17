@@ -4,7 +4,9 @@
 # Output: numpy vector z of k rows, 1 column
 import math
 
+import graphviz
 import numpy as np
+import sklearn
 
 import cart
 
@@ -32,6 +34,9 @@ def run(k,X,y):
         
         # q,mu_pos,mu_neg,sigma2_pos,sigma2_neg = probclearn.run(X_train, Y_train)
         clf = cart.train(X_train, Y_train) 
+        dot_data = sklearn.tree.export_graphviz(clf, feature_names = X.columns, out_file=None)
+        graph = graphviz.Source(dot_data)
+        graph.render("visualization_"+str(i))
         z[i] = 0
 
         for t in T:

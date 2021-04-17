@@ -13,15 +13,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer, OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 
-#print(__doc__)
-
-
-
 np.set_printoptions(threshold=sys.maxsize)
 
 def load_data():
+
+    # Binarize committe and subcommittee codes
     mlb = MultiLabelBinarizer()
-    # header_names = ["bill_id", "cosponsors", "sponsor_party", "sponsor_state", "committee_codes", "subcommittee_codes", "primary_subject", "is_pork"]
     df = pd.read_csv("billdata.csv")
 
     # In csv file, column values are strings, but we must parse them as lists
@@ -33,25 +30,25 @@ def load_data():
     df = df.join(pd.DataFrame(mlb.fit_transform(df["committee_codes"]), columns=mlb.classes_, index=df.index))
     df = df.join(pd.DataFrame(mlb.fit_transform(df["subcommittee_codes"]), columns=mlb.classes_, index=df.index))
 
-
     # Remove columns since they are now redundant
     df = df.drop(["committee_codes", "subcommittee_codes"], axis=1)
 
-    # Transform sponsor columns into one-hot arrays
+
+    one_hot_encoder_columns = ['sponsor_party', 'sponsor_state', 'primary_subject']
+    # Transform sponsor columns into one-hot arrays so decision tree can use categorical variables
     enc = OneHotEncoder(handle_unknown='ignore')
-    X = df[['sponsor_party', 'sponsor_state']]
-    enc.fit(X)
-    X = enc.transform(X).toarray()
-    df = df.join(pd.DataFrame(X))
-    # print(df.columns)
-    df = df.drop(['bill_id'], axis=1)
+    X = enc.fit_transform(df[one_hot_encoder_columns])
+
+    # Create dataframe with sponsor columns and their corresponding feature titles
+    # The new features will be labled as sponsor_party_R, sponsor_party_D, sponsor_state_CA, sponsor_state_AZ, etc.
+    #   and will take on binary values
+    Xdf = pd.DataFrame(X.toarray(), columns=enc.get_feature_names(one_hot_encoder_columns))
+
+    # Combine sponsor dataframe with that of the rest of the data
+    df = df.join(Xdf).drop(['bill_id'], axis=1)
     
-
-    # Remove redundant columns
-    df = df.drop(["sponsor_party", "sponsor_state", "primary_subject"], axis=1)
-    #print(df.to_string())
-
-    # X_train, X_test, y_train, y_test = train_test_split(df.to_numpy(), y, test_size=test_size, random_state=1)
+    # Remove columns made redundant
+    df = df.drop(one_hot_encoder_columns, axis=1)
 
     X_data = df.drop(['is_pork'], axis=1) 
     y_data = df[['is_pork']]
@@ -69,6 +66,7 @@ def train(X_train, y_train):
     # plt.figure()
     # plot_tree(clf, filled=True)
     # plt.show()
+    print(X_train)
 
     return clf
 

@@ -1,0 +1,16 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="SSAP <= 0.5\ngini = 0.221\nsamples = 150\nvalue = [131, 19]"] ;
+1 [label="cosponsors <= 2.5\ngini = 0.044\nsamples = 134\nvalue = [131, 3]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2]"] ;
+1 -> 2 ;
+3 [label="primary_subject_Transportation and public works <= 0.5\ngini = 0.015\nsamples = 132\nvalue = [131, 1]"] ;
+1 -> 3 ;
+4 [label="gini = 0.0\nsamples = 131\nvalue = [131, 0]"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 16\nvalue = [0, 16]"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
