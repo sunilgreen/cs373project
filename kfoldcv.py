@@ -8,10 +8,8 @@ import graphviz
 import numpy as np
 import sklearn
 
-import cart
 
-
-def run(k,X,y):
+def run(k, X, y, algo, algo_name, threshold=None):
     n, d = X.shape
     print(n,d)
     z = np.zeros((k,1))
@@ -33,14 +31,14 @@ def run(k,X,y):
             Y_train[t] = y.iloc[S[t]]
         
         # q,mu_pos,mu_neg,sigma2_pos,sigma2_neg = probclearn.run(X_train, Y_train)
-        clf = cart.train(X_train, Y_train) 
-        dot_data = sklearn.tree.export_graphviz(clf, feature_names = X.columns, out_file=None)
-        graph = graphviz.Source(dot_data)
-        graph.render("visualization_"+str(i))
+        clf = algo.train(X_train, Y_train, threshold) 
+        # dot_data = sklearn.tree.export_graphviz(clf, feature_names = X.columns, out_file=None)
+        # graph = graphviz.Source(dot_data)
+        # graph.render("visualizations/visualization_"+algo_name+"_"+str(i))
         z[i] = 0
 
         for t in T:
-            y_pred = cart.test([X.iloc[t]], clf)
+            y_pred = algo.test([X.iloc[t]], clf)
             pred_value = False
             if y_pred[0] == 1.0:
                 pred_value = True

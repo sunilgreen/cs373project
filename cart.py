@@ -54,9 +54,9 @@ def load_data():
     y_data = df[['is_pork']]
     return X_data, y_data
 
-def train(X_train, y_train):
+def train(X_train, y_train, threshold=None):
 
-    clf = DecisionTreeClassifier()
+    clf = DecisionTreeClassifier(min_impurity_decrease=threshold)
     clf = clf.fit(X_train,y_train)
     # print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
@@ -66,7 +66,7 @@ def train(X_train, y_train):
     # plt.figure()
     # plot_tree(clf, filled=True)
     # plt.show()
-    print(X_train)
+    # print(X_train)
 
     return clf
 
