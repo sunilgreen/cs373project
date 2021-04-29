@@ -1,6 +1,7 @@
 # Input: number of folds k
 #         numpy matrix X of features, with n rows (samples), d columns (features)
 #         numpy vector y of scalar values, with n rows (samples), 1 column
+#        (optional) number threshold: either information or gini gain threshold to be used by algo
 # Output: numpy vector z of k rows, 1 column
 import math
 
@@ -11,7 +12,6 @@ import sklearn
 
 def run(k, X, y, algo, algo_name, threshold=None):
     n, d = X.shape
-    print(n,d)
     z = np.zeros((k,1))
     for i in range(0,k):
        

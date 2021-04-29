@@ -10,10 +10,8 @@ NUM_ITERS = 30
 
 
 
-def run():
-    X, y = cart.load_data()
-    #print(kfoldcv.run(4, X, y, cart, "cart", threshold=0.4))
 
+# Observe error when using different Information Gain Threshold values
 def tune_C45():
     X, y = cart.load_data()
     for i in range(1,40):
@@ -22,52 +20,61 @@ def tune_C45():
 
 # Test accuracy when using different values of the hyperparameter Information Gain Threshold
 def thresholds_C45():
+
+    # Open CSV to which findings will be written
     with open("thresholds_C45.csv", "w", newline='') as f:
         writer = csv.writer(f)
         writer.writerow(["Information Gain Threshold", "Accuracy"])
 
+
+        # Load bill data
         X, y = cart.load_data()
 
-        # Check accuracy when threshold is t = 1, 2, 3,...30
+        # Check accuracy when information gain threshold is t = 1, 2, 3,...30
         for t in range(1,31):
 
             # The running sum of accuracies, to be divided to find the average
             t_tot = 0
 
             for iters in range(NUM_ITERS):
-                # Select 20 random indices to use as test data, without replacement
+
+                # Select 20 random indices to use for test data, without replacement
                 indices = random.sample(range(200), 20)
 
                 # All possible indices that weren't randomly selected
                 unselected_indices = [i for i in range(200) if i not in indices]
 
-                
                 # Use every sample that's not test data as training data
                 X_sub = np.array([X.iloc[i] for i in unselected_indices])
                 y_sub = np.array([y.iloc[i] for i in unselected_indices])
 
-                # Get testing subset
+                # Get testing set using randomly selected indices
                 X_test = np.array([X.iloc[i] for i in indices])
                 y_test = np.array([y.iloc[i] for i in indices])
 
-                
                 clf = c45_tree.train(X_sub, np.hstack(y_sub), threshold=t)
 
                 # Increment running accuracy total
                 t_tot += clf.score(X_test, y_test)
 
             t_avg = t_tot/NUM_ITERS
+
             print("Average accuracy for threshold = "+str(t)+": "+str(t_avg))
+
+            # Write threshold and corresponding average accuracy to CSV file
             writer.writerow([t, t_avg])
             
 
 
 # Test accuracy when training with different sized subsets
 def subsets_C45():
+
+    # Open CSV to which findings will be written
     with open("subsets_C45.csv", "w", newline='') as f:
         writer = csv.writer(f)
         writer.writerow(["Number of Samples", "Accuracy"])
         
+        # Load bill data
         X, y = cart.load_data()
 
 
@@ -96,10 +103,9 @@ def subsets_C45():
                 n_tot += clf.score(X_test, y_test)
 
             n_avg = n_tot/NUM_ITERS
+
             print("Average accuracy for n = "+str(n)+": "+str(n_avg))
+            
+            # Write n and corresponding average accuracy to CSV file
             writer.writerow([n, n_avg])
 
-
-
-        
-thresholds_C45()
