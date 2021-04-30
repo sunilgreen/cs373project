@@ -72,15 +72,7 @@ def train(X_train, y_train, threshold=None):
     # plt.figure()
     # plot_tree(clf, filled=True)
     # plt.show()
-   
-
-    # Draw graph
-    graph = graphviz.Source(dot_data, format="png") 
-    graph
-    graph.render("decision_tree_graphivz")
-  
-
-   
+       
     # print(X_train)
 
     return clf

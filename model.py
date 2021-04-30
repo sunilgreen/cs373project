@@ -109,7 +109,7 @@ def thresholds(C45):
                     X_test = np.array([X.iloc[i] for i in indices])
                     y_test = np.array([y.iloc[i] for i in indices])
 
-                    clf = c45_tree.train(X_sub, np.hstack(y_sub), threshold=float(t/1000))
+                    clf = cart.train(X_sub, np.hstack(y_sub), threshold=float(t/1000))
 
                     # Increment running accuracy total
                     t_tot += clf.score(X_test, y_test)
@@ -194,7 +194,7 @@ def subsets(C45):
                     y_test = np.array([y.iloc[i] for i in indices[n:]])
 
                     
-                    clf = c45_tree.train(X_sub, np.hstack(y_sub), threshold=0.026)
+                    clf = cart.train(X_sub, np.hstack(y_sub), threshold=0.026)
 
                     # Increment running accuracy total
                     n_tot += clf.score(X_test, y_test)
@@ -207,4 +207,5 @@ def subsets(C45):
                 writer.writerow([n, n_avg])
 
 
-
+thresholds(False)
+subsets(False)
