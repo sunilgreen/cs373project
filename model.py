@@ -81,14 +81,14 @@ def thresholds(C45):
         # Open CSV to which findings will be written
         with open("thresholds_cart.csv", "w", newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(["Information Gain Threshold", "Accuracy"])
+            writer.writerow(["Gini Threshold", "Accuracy"])
 
 
             # Load bill data
             X, y = cart.load_data()
 
             # Check accuracy when information gain threshold is t = 1, 2, 3,...30
-            for t in range(1,31):
+            for t in range(0,31):
 
                 # The running sum of accuracies, to be divided to find the average
                 t_tot = 0
@@ -116,7 +116,7 @@ def thresholds(C45):
 
                 t_avg = t_tot/NUM_ITERS
 
-                print("Average accuracy for threshold = "+str(t)+": "+str(t_avg))
+                print("Average accuracy for threshold = "+str(t/1000)+": "+str(t_avg))
 
                 # Write threshold and corresponding average accuracy to CSV file
                 writer.writerow([t, t_avg])
@@ -208,4 +208,3 @@ def subsets(C45):
 
 
 thresholds(False)
-subsets(False)
