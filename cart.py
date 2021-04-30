@@ -64,16 +64,11 @@ def load_data():
 
 def train(X_train, y_train, threshold=None):
 
-    clf = DecisionTreeClassifier(min_impurity_decrease=threshold)
+    if threshold is None:
+        clf = DecisionTreeClassifier()
+    else:   
+        clf = DecisionTreeClassifier(min_impurity_decrease=threshold)
     clf = clf.fit(X_train,y_train)
-
-    # Uncomment to get graphs #
-    # sklearn.tree.plot_tree(clf, filled=True, fontsize=20)
-    # plt.figure()
-    # plot_tree(clf, filled=True)
-    # plt.show()
-       
-    # print(X_train)
 
     return clf
 
