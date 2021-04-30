@@ -8,6 +8,12 @@ import random
 import csv
 NUM_ITERS = 30
 
+
+def show_graphs():
+    ##Make sure code in cart.train is uncommented 
+    X, y = cart.load_data()
+    kfoldcv.run(4, X, y, cart, "cart", threshold=0.026)
+
 # Observe error when using different Gini Threshold values
 def tune_cart():
     X, y = cart.load_data()
@@ -201,4 +207,4 @@ def subsets(C45):
                 writer.writerow([n, n_avg])
 
 
-thresholds(False)
+

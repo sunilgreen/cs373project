@@ -12,8 +12,12 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer, OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier, plot_tree
+import matplotlib.pyplot as plt
+from sklearn import tree
+
 
 np.set_printoptions(threshold=sys.maxsize)
+
 
 def load_data():
 
@@ -52,23 +56,38 @@ def load_data():
 
     X_data = df.drop(['is_pork'], axis=1) 
     y_data = df[['is_pork']]
+    global feature_names 
+    feature_names = list(X_data)
+    global class_names
+    class_names = list(y_data)
     return X_data, y_data
 
 def train(X_train, y_train, threshold=None):
 
     clf = DecisionTreeClassifier(min_impurity_decrease=threshold)
     clf = clf.fit(X_train,y_train)
-    # print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
-
-    # sklearn.tree.plot_tree(clf)
-
+    # Uncomment to get graphs #
+    # sklearn.tree.plot_tree(clf, filled=True, fontsize=20)
     # plt.figure()
     # plot_tree(clf, filled=True)
     # plt.show()
+   
+
+    # Draw graph
+    graph = graphviz.Source(dot_data, format="png") 
+    graph
+    graph.render("decision_tree_graphivz")
+  
+
+   
     # print(X_train)
 
     return clf
 
 def test(X_test, clf):
     return clf.predict(X_test)
+
+
+
+
