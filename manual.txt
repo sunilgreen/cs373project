@@ -1,0 +1,101 @@
+-------------------------------------------------------------------------------
+| 1. External Libraries & Tools                                               |
+-------------------------------------------------------------------------------
+
+Our project uses the following python modules not included in the standard
+library: 
+  1. sklearn
+  2. numpy
+  3. pandas
+  4. graphviz
+  5. matplotlib
+All of these may be installed via pip. 
+
+We also used a modified version of RaczeQ's C4.5 tree algorithm, the original 
+of which can be found at: 
+  https://github.com/RaczeQ/scikit-learn-C4.5-tree-classifier
+
+-------------------------------------------------------------------------------
+| 2. Running CART                                                             |
+-------------------------------------------------------------------------------
+
+cart.py includes the following functions: 
+  1. load_data(): Reads the data from billdata.csv and performs preprocessing
+  2. train(X_train, y_train, threshold=None): Creates the CART tree using the
+     testing data in X_train and y_train. threshold can optionally be used to
+     set the minimum gini threshold
+  3. test(X_test, clf): Predicts a label for X_test using the tree clf
+
+In the simplest case, for example, the following code could be used to train on
+the entire dataset: 
+  import cart
+  X, y = cart.load_data()
+  clf = cart.train(X, y)
+Most of the time, however, this code is run through kfoldcv.py, rather than
+directly: 
+  import cart
+  import kfoldcv
+  X, y = cart.load_data()
+  kfoldcv.run(4, X, y, cart, "cart")
+See section 4 for a description of kfoldcv.py
+
+-------------------------------------------------------------------------------
+| 3. Running C4.5                                                             |
+-------------------------------------------------------------------------------
+
+c45_tree.py includes the following functions: 
+  1. train(X_train, y_train, threshold=None): Creates the C4.5 tree using the
+     testing data in X_train and y_train. threshold can optionally be used to
+     set the minimum gain threshold. This is simply a wrapper for our modified
+     C45 algorithm, found in C45 folder. 
+  2. test(X_test, clf): Predicts a label for X_test using the tree clf
+
+Running C4.5 is identical to running CART, though it should be noted that we
+use cart.load_data for both algorithms. So, for example: 
+  import cart
+  import kfoldcv
+  import c45_tree
+  X, y = cart.load_data()
+  kfoldcv.run(4, X, y, c45_tree, "c45")
+
+-------------------------------------------------------------------------------
+| 4. Running k-fold cross validation                                          |
+-------------------------------------------------------------------------------
+
+kfoldcv.py includes the following function: 
+  run(k, X, y, algo, algo_name, threshold=None): Assigns samples from X to k
+  different folds, trains the algorithm 'algo' for each, tests each tree with
+  the remaining samples, and returns the error. 
+
+-------------------------------------------------------------------------------
+| 5. model.py                                                                 |
+-------------------------------------------------------------------------------
+
+model.py includes functions for testing our hyperparameters. tune_cart() and
+tune_C45() print the error for different gini and information gain thresholds 
+for CART and C4.5, respectively. 
+
+thresholds(C45) finds the accuracy of different gini thresholds and writes them
+to thresholds_cart.csv if C45=False. Otherwise, if C45=True it finds the accuracy of
+different information gain thresholds and writes them to thresholds_C45.csv. 
+
+subsets(C45) likewise finds the accuracy for different sizes of random subsets
+from X. If C45=False, it uses cart and writes the accuracy to
+subsets_cart.csv; otherwise, it uses C45 and writes the accuracy to
+subsets_C45.csv. 
+
+Note: Running any of these functions can be done by uncommenting lines of 
+code specified at the end of model.py. Both thresholds functions may take
+a long time, and if you wish to shorten the amount of time they run for 
+you can reduce iterations in the for loops on line 45 (for C45) or line 88 
+(for cart). Similarly, if you wish to reduce the amount of time either of the
+subsets functions run for you can reduce iterations in the for loops on line
+138 (for C45) or line 177 (for cart).
+
+
+-------------------------------------------------------------------------------
+| 6. viz.py                                                                   |
+-------------------------------------------------------------------------------
+
+viz.py produces a graphic of the tree produced by cart.py. It may run via
+  python viz.py

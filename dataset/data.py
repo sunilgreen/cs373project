@@ -11,3 +11,5 @@ for i in range (1000,1200):
     
     if (len(o["committee_codes"]) > 0 and len(o["subcommittee_codes"]) > 0):
       print(";".join([o['bill_id'], str(o["cosponsors"]), o["sponsor_party"], o["sponsor_state"], str(o["committee_codes"]), str(o["subcommittee_codes"]), o["primary_subject"]]))
+
+#Note: Bills were proofread after pulling and cross checked with Citizens Against Government waste to ensure that they were not pork barreled

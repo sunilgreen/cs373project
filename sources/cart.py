@@ -23,7 +23,7 @@ def load_data():
 
     # Binarize committe and subcommittee codes
     mlb = MultiLabelBinarizer()
-    df = pd.read_csv("billdata.csv")
+    df = pd.read_csv("../dataset/billdata.csv")
 
     # In csv file, column values are strings, but we must parse them as lists
     df["committee_codes"] = df["committee_codes"].transform(lambda x: ast.literal_eval(x))

@@ -9,10 +9,6 @@ import csv
 NUM_ITERS = 30
 
 
-def show_graphs():
-    ##Make sure code in cart.train is uncommented 
-    X, y = cart.load_data()
-    kfoldcv.run(4, X, y, cart, "cart", threshold=0.026)
 
 # Observe error when using different Gini Threshold values
 def tune_cart():
@@ -31,7 +27,8 @@ def tune_C45():
         print("Threshold: "+str(i))
         print(kfoldcv.run(4, X, y, c45_tree, "c45", threshold=float(i)))
 
-# Test accuracy when using different values of the hyperparameter Information Gain Threshold
+# Test accuracy when using different values of the hyperparameter Information Gain Threshold of Gini Threshold 
+# Pass in "True" for C45 or "False" for cart
 def thresholds(C45):
 
     if (C45):
@@ -125,6 +122,7 @@ def thresholds(C45):
 
 
 # Test accuracy when training with different sized subsets
+# Pass in "True" for C45 of "False" for cart
 def subsets(C45):
     if (C45):
         # Open CSV to which findings will be written
@@ -207,4 +205,14 @@ def subsets(C45):
                 writer.writerow([n, n_avg])
 
 
-thresholds(False)
+#Uncomment to get information gain threshold data for C45
+#thresholds(True)
+
+#Uncomment to get information gain threshold data for cart
+#thresholds(False)
+
+#Uncomment to get accuracy data vs sample size for C45
+#subsets(True)
+
+#Uncomment to get accuracy data vs sample size for cart
+#subsets(False)
