@@ -92,6 +92,8 @@ you can reduce iterations in the for loops on line 45 (for C45) or line 88
 subsets functions run for you can reduce iterations in the for loops on line
 138 (for C45) or line 177 (for cart).
 
+To run: python model.py
+
 
 -------------------------------------------------------------------------------
 | 6. viz.py                                                                   |
